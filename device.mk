@@ -14,6 +14,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 DEVICE_PATH := device/motorola/lyriq
 
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 
