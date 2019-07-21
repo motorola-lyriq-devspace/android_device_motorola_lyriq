@@ -88,5 +88,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_USES_METADATA_PARTITION := true
 
+# SPL
+VENDOR_SECURITY_PATCH := 2025-04-01
+
 # Inherit the proprietary files
 include vendor/motorola/lyriq/BoardConfigVendor.mk
