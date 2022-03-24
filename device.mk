@@ -3,6 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit launch_with_vendor_ramdisk product
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
 DEVICE_PATH := device/motorola/lyriq
 
 # Shipping API level
