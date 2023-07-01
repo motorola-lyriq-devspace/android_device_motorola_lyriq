@@ -6,6 +6,9 @@
 DEVICE_PATH := device/motorola/lyriq
 KERNEL_PATH := device/motorola/lyriq-kernel
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
