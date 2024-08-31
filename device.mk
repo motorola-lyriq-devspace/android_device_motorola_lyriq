@@ -71,6 +71,7 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6893.rc \
     init.cgroup.rc \
+    init.recovery.mt6893.rc \
     init.oem.hw.sh \
     init.project.rc \
     init.sensor_2_0.rc \
