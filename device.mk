@@ -21,6 +21,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
