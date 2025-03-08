@@ -47,6 +47,7 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 
 # Fastboot
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot-service.example_recovery \
     fastbootd
 
 # Soong namespaces
