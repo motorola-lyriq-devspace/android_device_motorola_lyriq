@@ -9,6 +9,17 @@ KERNEL_PATH := device/motorola/lyriq-kernel
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
+# A/B
+AB_OTA_PARTITIONS := \
+    boot \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot \
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
