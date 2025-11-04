@@ -90,6 +90,17 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/m
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.recovery))
 BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
 
+# Recovery touch modules (from vendor_dlkm)
+RECOVERY_KERNEL_MODULES := \
+    mmi_info \
+    mmi_relay \
+    sensors_class \
+    touchscreen_u_mmi \
+    goodix_brl_u_mmi
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(addprefix $(KERNEL_PATH)/vendor/,$(addsuffix .ko,$(RECOVERY_KERNEL_MODULES)))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(RECOVERY_KERNEL_MODULES)
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE :=  262144 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
